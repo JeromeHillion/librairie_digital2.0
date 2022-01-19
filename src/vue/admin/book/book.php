@@ -5,35 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../../public/css/normalize.css">
+    <link rel="stylesheet" href="../../../public/css/normalize.css">
+    <link rel="stylesheet" href="../../../public/css/admin/book/book.css">
 
-    <title>Catalogue</title>
+    <title>Librairie digital - Ajout livre</title>
 </head>
 
 <body>
 <div class="containerGeneral">
 
     <div class="container">
-        <div class="book">
-            <h1>Rechercher un livre</h1>
 
+        <h1>Rechercher un livre</h1>
 
-            <form action="BookController.php" method="POST">
-                <h3 class="primary-color">Taper le nom du livre que vous souhaitez rechercher</h3>
-                <div class="name">
-                    <label for="name">Nom</label>
-                    <input type="text" name="name" id="name">
-                    <span id="nameEmpty">Le champs est vide !</span>
-                    <input type="submit">
-                </div>
-
-            </form>
-
-        </div>
+        <form id="search" action="BookController.php" method="POST">
+            <h3>Taper le nom du livre que vous souhaitez rechercher</h3>
+            <label for="name"></label>
+            <input type="text" name="name" id="name">
+            <input type="submit">
+            <span id="error"></span>
+        </form>
 
         <div class="result">
-            <h1>Résultat de la recherche</h1>
             <?php if ($books) : ?>
+                <h1>Résultat de la recherche</h1>
                 <table>
                     <thead>
                     <tr>
@@ -45,31 +40,36 @@
                         <th>Action</th>
                     </tr>
                     </thead>
-                    <tbody id="dataCategories">
+                    <tbody>
 
-                    <?php foreach ($books as $book):?>
+                    <?php foreach ($books as $book): ?>
                         <tr>
-                           <td><?= $book['isbn'];?></td>
-                            <td><?= $book['name'];?>
-                            <td><?=  $book['publication'];?></td>
-                            <?php if (($book['categorie'] )):?>
-                            <?php foreach ($book['categorie'] as $categorie):?>
-                            <td><?= $categorie; ?></td>
-                            <?php endforeach;?>
-                            <?php else:?>
-                            <td>non comuniqué</td>
-                            <?php endif;?>
-                            <td>
-                            <?php foreach ($book['authors'] as $author):?>
-                            <?= $author.", ";?>
-                            <?php endforeach;?>
-                            </td>
+                            <td><?= $book['isbn']; ?></td>
+                            <td><?= $book['name']; ?>
+                            <td><?= $book['publication']; ?></td>
 
+                            <?php if (($book['categorie'])): ?>
+                                <?php foreach ($book['categorie'] as $categorie): ?>
+                                    <td><?= $categorie; ?></td>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <td>non comuniqué</td>
+                            <?php endif; ?>
+
+                            <?php if (($book['categorie'])): ?>
+                                <td>
+                                <?php foreach ($book['authors'] as $author): ?>
+                                   <?= $author; ?>
+                                <?php endforeach; ?>
+                                </td>
+                            <?php else: ?>
+                                <td>non comuniqué</td>
+                            <?php endif; ?>
 
                             <td>
                                 <form action="DetailsBookController.php" method="POST">
-                                <input type="hidden" name="isbn" value="<?= $book['isbn']?>">
-                                <input  class="btnDetail" type="submit" value="détails">
+                                    <input type="hidden" name="isbn" value="<?= $book['isbn'] ?>">
+                                    <input class="btnDetail" type="submit" value="détails">
                                 </form>
                                 <form action="../../../repository/CategoryRepository.php" method="POST">
                                     <input type="hidden" name="isbn" value="<?= $book['isbn'] ?>">
@@ -77,16 +77,16 @@
                                 </form>
                             </td>
                         </tr>
-                    <?php endforeach;?>
+                    <?php endforeach; ?>
 
                     </tbody>
                 </table>
-            <?php endif;?>
+            <?php endif; ?>
         </div>
 
     </div>
-    <script src="../../public/js/jquery.js"></script>
-    <script src="../../public/js/Admin/book.js"></script>
+
+    <script src="../../../public/js/admin/book/book.js"></script>
 </body>
 
 </html>
