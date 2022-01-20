@@ -119,6 +119,11 @@ class GoogleBooksApiManager
                 $language = "Français";
             }
 
+            elseif ($language === "en")
+            {
+                $language = "English";
+            }
+
             $arrBookData ["data"] = [
             "isbn" => $isbn,
             "title" => $title,

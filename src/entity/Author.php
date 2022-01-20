@@ -5,7 +5,7 @@ namespace App\entity;
 class Author
 {
     protected int $id;
-    protected array $name;
+    protected string $name;
     
     /**
      * __construct
@@ -29,20 +29,22 @@ class Author
     }
 
     /**
-     * @return array
+     * @return string
      */
-    public function getName(): array
+    public function getName(): string
     {
         return $this->name;
     }
 
     /**
-     * @param array $name
+     * @param string $name
      */
-    public function setName(array $name): void
+    public function setName(string $name): void
     {
         $this->name = $name;
     }
+
+
 
 
 }

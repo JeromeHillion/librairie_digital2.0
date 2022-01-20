@@ -43,9 +43,32 @@ class CrudRepository
         return $res;
     }
 
-    public function add(string $object)
+    public function findByName(string $table, string $name)
     {
+        $pdo = $this->connection->getConnectionToBdd();
+        $req= $pdo->prepare("SELECT * FROM `$table` WHERE name = ?");
+        $req->execute([$name]);
+        $res = $req->fetch();
 
+        if (!$res)
+        {
+            return null;
+        }
+        return $res;
+    }
+
+    public function add(string $table,string $name)
+    {
+        $pdo = $this->connection->getConnectionToBdd();
+        $req = $pdo->prepare("INSERT INTO `$table` (name) VALUES(:name)");
+
+        $req->bindValue(':name', ucfirst($name));
+
+        $res = $req->execute();
+
+        if (!$res) {
+            $req->errorInfo();
+        }
     }
 
     public function delete(string $object)

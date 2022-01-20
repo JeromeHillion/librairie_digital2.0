@@ -9,7 +9,8 @@ require '../../../vendor/autoload.php';
 
 if ($_POST) {
     $googleBookApiManager = new GoogleBooksApiManager();
-    $books =$googleBookApiManager->getListInfos($_POST['name']) ;
+    $books =$googleBookApiManager->getListInfos(htmlspecialchars($_POST['name'])) ;
+
 }
 else
 {
