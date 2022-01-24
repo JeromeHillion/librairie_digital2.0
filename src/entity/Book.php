@@ -8,7 +8,7 @@ class Book
     public int $id;
     public int $isbn;
     public string $name;
-    public array $cover;
+    public string $cover;
     public string $publication;
     public string $summary;
     protected int $category_id;
@@ -44,25 +44,22 @@ class Book
         $this->isbn = $isbn;
     }
 
-
-
-
-
     /**
-     * @return array
+     * @return string
      */
-    public function getCover(): array
+    public function getCover(): string
     {
         return $this->cover;
     }
 
     /**
-     * @param array $cover
+     * @param string $cover
      */
-    public function setCover(array $cover): void
+    public function setCover(string $cover): void
     {
         $this->cover = $cover;
     }
+
 
 
     public function getName(): string

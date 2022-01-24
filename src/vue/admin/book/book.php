@@ -71,7 +71,7 @@
                                     <input type="hidden" name="isbn" value="<?= $book['isbn'] ?>">
                                     <input class="btnDetail" type="submit" value="détails">
                                 </form>
-                                <form action="../../../repository/CategoryRepository.php" method="POST">
+                                <form action="crud/addBookFormController.php" method="POST">
                                     <input type="hidden" name="isbn" value="<?= $book['isbn'] ?>">
                                     <input class="btnAdd" type="submit" value="Ajouter">
                                 </form>

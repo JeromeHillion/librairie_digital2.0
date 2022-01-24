@@ -8,6 +8,6 @@ require '../../../../vendor/autoload.php';
 
 $googleBooksApiManager = new  GoogleBooksApiManager();
 $book = $googleBooksApiManager->getBookByIsbn($_POST['isbn']);
-
-
+/*var_dump($book);
+die;*/
 require '../../../vue/admin/book/crud/addBookForm.php';

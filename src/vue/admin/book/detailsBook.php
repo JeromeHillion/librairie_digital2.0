@@ -17,7 +17,10 @@
         <?php if ($book['data']['language'] === "Français") :?>
         <h2><?= $book['data']['categories']?></h2>
         <h1><?= $book['data']['title']?></h1>
-        <h3>de <?= $book['data']['authors']?></h3>
+        <h3>De: </h3>
+            <?php foreach ($book['data']['authors'] as $author):?>
+                <h3><?=$author ?></h3>
+            <?php endforeach;?>
         <h2><?= $book['data']['publishedDate']?></h2>
         <img src="<?= $book['data']['imageLinks']?>" alt="thumbnail">
         <h2>Résumé</h2>
@@ -27,7 +30,9 @@
         <?php if ($book['data']['language'] === "English") :?>
         <h2><?= $book['data']['categories']?></h2>
         <h1><?= $book['data']['title']?></h1>
-        <h3>By: <?= $book['data']['authors']?></h3>
+        <?php foreach ($book['data']['authors'] as $author):?>
+        <h3>By: <?=$author ?></h3>
+        <?php endforeach;?>
         <h2><?= $book['data']['publishedDate']?></h2>
         <img src="<?= $book['data']['imageLinks']?>" alt="thumbnail">
             <h2>Summary</h2>

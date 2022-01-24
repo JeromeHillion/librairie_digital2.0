@@ -106,7 +106,7 @@ class GoogleBooksApiManager
         die;*/
 
             $title= $book['items'][0]['volumeInfo']['title'] ?? "";
-            $authors= $book['items'][0]['volumeInfo']['authors'][0] ?? "";
+            $authors= $book['items'][0]['volumeInfo']['authors'] ?? "";
             $categories= $book['items'][0]['volumeInfo']['categories'][0] ?? "";
             $publishedDate= $book['items'][0]['volumeInfo']['publishedDate'] ?? "";
             $imageLinks= $book['items'][0]['volumeInfo']['imageLinks']['thumbnail'] ?? "";

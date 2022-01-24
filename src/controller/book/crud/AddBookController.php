@@ -2,53 +2,72 @@
 
 
 use App\entity\Author;
+use App\entity\Book;
 use App\entity\Category;
 use App\manager\GoogleBooksApiManager;
-use App\repository\CrudRepository;
+use App\repository\AuthorRepository\AuthorRepository;
+use App\repository\BookRepository\BookRepository;
+use App\repository\CategoryRepository\CategoryRepository;
+
 
 ini_set('display_errors', true);
 
 require '../../../../vendor/autoload.php';
 
-$isbn = htmlspecialchars($_POST['isbn']);
-$name = htmlspecialchars($_POST['name']);
-$publication = htmlspecialchars($_POST['publication']);
-$cover = htmlspecialchars($_POST['cover']);
-$summary= htmlspecialchars($_POST['summary']);
-$category = htmlspecialchars($_POST['category']);
-$author = htmlspecialchars($_POST['author']);
-
-$crudRepository = new CrudRepository();
+$categoryRepository = new CategoryRepository();
+$authorRepository = new AuthorRepository();
+$bookRepository = new BookRepository();
 $category = new Category();
 $author = new Author();
+$book = new Book();
+
 
 $category->setName(htmlspecialchars($_POST['category']));
-$categoryExist =$crudRepository->findByName('category', $category->getName());
+$categoryExist = $categoryRepository->findByName($category->getName());
 
+
+if (!$categoryExist) {
+    $categoryRepository->add($category);
+    $book->setCategoryId($category['id']);
+
+} else {
+    echo "La catégorie " . $category->getName() . " existe déjà !";
+    $arrCategory = $categoryRepository->findByName($category->getName());
+    foreach ($arrCategory as $categoryId) {
+        $book->setCategoryId($categoryId['id']);
+
+    }
+}
 $author->setName(htmlspecialchars($_POST['author']));
-$authorExist =$crudRepository->findByName('author', $author->getName());
+$authorExist = $authorRepository->findByName($author->getName());
 
-if (!$categoryExist)
-{
-    $crudRepository->add('category',$category->getName());
 
+if (!$authorExist) {
+    $authorRepository->add($author);
+    $book->setAuthorId($author['id']);
+
+} else {
+    echo "L'auteur'" . $category->getName() . " existe déjà !";
+    $arrAuthor = $authorRepository->findByName($author->getName());
+    foreach ($arrAuthor as $authorId) {
+        $book->setAuthorId($authorId['id']);
+
+    }
 }
 
-else
-{
-    echo "La catégorie ".$category->getName()." existe déjà !";
-}
 
-if (!$authorExist)
-{
-    $crudRepository->add('author',$author->getName());
-    echo "L'auteur a bien été ajouté !";
 
-}
+$book->setIsbn(htmlspecialchars($_POST['isbn']));
+$book->setName(htmlspecialchars($_POST['name']));
+$book->setPublication(htmlspecialchars($_POST['publication']));
+$book->setCover(htmlspecialchars($_POST['cover']));
+$book->setSummary(htmlspecialchars($_POST['summary']));
 
-else
-{
-    echo "L'auteur' ".$author->getName()." existe déjà !";
+$bookExist = $bookRepository->findByIsbn($book->getIsbn());
+
+if (!$bookExist) {
+    echo "Le livre n'existe pas !";
+    $bookRepository->add($book);
 }
 
 

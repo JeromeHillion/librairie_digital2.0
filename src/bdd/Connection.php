@@ -11,12 +11,18 @@ class Connection
 
     public function __construct()
     {
-        $this->config = Config::getConfig();
+        $this->config = [];
     }
 
-    public   function getConnectionToBdd(): \PDO
+    public function getConfig(): array
     {
-        $config = $this->config;
+        return $this->config = Config::getConfig();
+    }
+
+
+    public function getConnectionToBdd(): PDO
+    {
+        $config = $this->getConfig();
         $hostname = $config['db_host'];
         $username = $config['db_user'];
         $password = $config['db_password'];

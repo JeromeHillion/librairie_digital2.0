@@ -13,7 +13,7 @@
 <div class="containerGeneral">
     <div class="container">
         <div class="form">
-        <form action="AddBookController" method="POST">
+        <form action="AddBookController.php" method="POST">
 
             <label for="isbn">
             ISBN
@@ -50,8 +50,8 @@
 
             <label for="author">
             auteur(e)(s)
-                <input type="text" name="author" value="<?= $book['data']['authors']?>">
-            </label>
+               <input type="text" name="author" value="<?= $book['data']['authors'][0]?>">
+                </label>
             <input type="submit" value="Ajouter">
         </form>
         </div>
