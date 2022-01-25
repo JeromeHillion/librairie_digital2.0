@@ -22,40 +22,37 @@ $author = new Author();
 $book = new Book();
 
 
+$categoryExist = $categoryRepository->findByName(htmlspecialchars($_POST['category']));
+
 $category->setName(htmlspecialchars($_POST['category']));
-$categoryExist = $categoryRepository->findByName($category->getName());
-
-
 if (!$categoryExist) {
     $categoryRepository->add($category);
-    $book->setCategoryId($category['id']);
 
 } else {
     echo "La catégorie " . $category->getName() . " existe déjà !";
-    $arrCategory = $categoryRepository->findByName($category->getName());
-    foreach ($arrCategory as $categoryId) {
-        $book->setCategoryId($categoryId['id']);
-
-    }
 }
-$author->setName(htmlspecialchars($_POST['author']));
-$authorExist = $authorRepository->findByName($author->getName());
+
+$categoryExist = $categoryRepository->findByName(htmlspecialchars($_POST['category']));
+foreach ($categoryExist as $categoryId) {
+    $book->setCategoryId($categoryId['id']);
+}
 
 
+$authorExist = $authorRepository->findByName((htmlspecialchars($_POST['author'])));
+
+$author->setName((htmlspecialchars($_POST['author'])));
 if (!$authorExist) {
     $authorRepository->add($author);
-    $book->setAuthorId($author['id']);
 
 } else {
-    echo "L'auteur'" . $category->getName() . " existe déjà !";
-    $arrAuthor = $authorRepository->findByName($author->getName());
-    foreach ($arrAuthor as $authorId) {
-        $book->setAuthorId($authorId['id']);
+    echo "L'auteur'" . $author->getName() . " existe déjà !";
 
-    }
 }
 
-
+$authorExist = $authorRepository->findByName((htmlspecialchars($_POST['author'])));
+foreach ($authorExist as $authorId) {
+    $book->setAuthorId($authorId['id']);
+}
 
 $book->setIsbn(htmlspecialchars($_POST['isbn']));
 $book->setName(htmlspecialchars($_POST['name']));
@@ -68,7 +65,8 @@ $bookExist = $bookRepository->findByIsbn($book->getIsbn());
 if (!$bookExist) {
     echo "Le livre n'existe pas !";
     $bookRepository->add($book);
+    header("Location: ../BookController.php");
 }
-
+header("Location: ../BookController.php");
 
 require '../../../vue/admin/book/crud/addBook.php';

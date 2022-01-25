@@ -7,7 +7,7 @@ ini_set('display_errors', true);
 require '../../../../vendor/autoload.php';
 
 $googleBooksApiManager = new  GoogleBooksApiManager();
-$book = $googleBooksApiManager->getBookByIsbn($_POST['isbn']);
-/*var_dump($book);
+/*var_dump($googleBooksApiManager->getBookByIsbn($_POST['isbn']));
 die;*/
+$book = $googleBooksApiManager->getBookByIsbn($_POST['isbn']);
 require '../../../vue/admin/book/crud/addBookForm.php';

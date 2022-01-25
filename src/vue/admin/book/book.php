@@ -44,11 +44,12 @@
 
                     <?php foreach ($books as $book): ?>
                         <tr>
+
                             <td><?= $book['isbn']; ?></td>
                             <td><?= $book['name']; ?>
                             <td><?= $book['publication']; ?></td>
 
-                            <?php if (($book['categorie'])): ?>
+                            <?php if ($book['categorie']): ?>
                                 <?php foreach ($book['categorie'] as $categorie): ?>
                                     <td><?= $categorie; ?></td>
                                 <?php endforeach; ?>
@@ -56,7 +57,7 @@
                                 <td>non comuniqué</td>
                             <?php endif; ?>
 
-                            <?php if (($book['categorie'])): ?>
+                            <?php if ($book['authors']): ?>
                                 <td>
                                 <?php foreach ($book['authors'] as $author): ?>
                                    <?= $author; ?>
