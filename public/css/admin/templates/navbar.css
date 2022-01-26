@@ -1,0 +1,81 @@
+.navbar{
+    display: flex;
+}
+
+.containerMiddle, .containerRight{
+    display: flex;
+}
+
+.containerLeft{
+    flex: 1 1 0;
+    background-color: #00C09E;
+    color: #008168;
+}
+
+.containerMiddle{
+    flex: 2 1 0;
+    background-color: #3F464C;
+    color: #A7B8C5;
+}
+
+
+.containerRight{
+    flex: 1 1 0;
+    background-color: #3F464C;
+    justify-content: end;
+
+}
+
+.subMenu, .subMenuTitle, .subMenuParams {
+    display: flex;
+    align-items: center;
+}
+
+.menu, .subMenu{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+}
+.menu img, .subMenu img{
+    width: 1.563rem;
+    height: 1.563rem;
+    margin-right: 0.3rem;
+}
+
+.subMenu a{
+    background-color: #2E3439;
+    color: #727F89;
+    text-decoration: none;
+    padding: 0.7rem;
+    border-radius: 0.3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.subMenuParams a{
+    background-color: #2E3439;
+    color: #727F89;
+    text-decoration: none;
+    padding: 0.7rem;
+    border-radius: 0.3rem;
+    font-weight: bold;
+}
+
+.subMenu h3{
+
+    margin: 0.1rem 0.5rem 0 0.5rem;
+}
+
+.subMenu{
+    flex: 1 1 0;
+    padding: 0.5rem;
+}
+
+.subMenuTitle{
+    flex: 1 1 0;
+}
+
+.subMenuParams{
+    padding: 0.5rem;
+}
