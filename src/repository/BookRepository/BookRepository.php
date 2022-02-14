@@ -36,9 +36,34 @@ class BookRepository extends Connection
         return $res;
     }
 
-    public function findAll(string $table)
+    public function findAll()
     {
-        // TODO: Implement findAll() method.
+
+        $req = $this->connection->prepare("SELECT book.id, book.isbn, book.name, category.name AS category, author.name AS author , book.cover, book.publication, book.summary FROM `$this->t_book` LEFT JOIN category ON category.id = book.category_id
+        LEFT JOIN author ON author.id = book.author_id;");
+        $req->execute();
+        $res = $req->fetchAll(PDO::FETCH_ASSOC);
+
+        if (!sizeof($res))
+        {
+            return [];
+        }
+        return $res;
+    }
+
+    public function findLast()
+    {
+
+        $req = $this->connection->prepare("SELECT book.id, book.isbn, book.name, category.name AS category, author.name AS author , book.cover, book.publication, book.summary FROM `$this->t_book` LEFT JOIN category ON category.id = book.category_id
+        LEFT JOIN author ON author.id = book.author_id LIMIT 10;");
+        $req->execute();
+        $res = $req->fetchAll(PDO::FETCH_ASSOC);
+
+        if (!sizeof($res))
+        {
+            return [];
+        }
+        return $res;
     }
 
     public function findByName(string $table, string $name): array
@@ -85,7 +110,7 @@ class BookRepository extends Connection
             return [];
         }
         return $res;
-    }*/
+    }
 
     /* public function save($book)
 

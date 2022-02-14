@@ -1,0 +1,104 @@
+.container{
+    display: flex;
+
+
+}
+.container .row:nth-child(1){
+    padding: 1rem;
+    flex: 0.651;
+}
+.container .row:nth-child(2){
+    padding: 2rem;
+    flex: 2;
+    background-color: #EEF0F3;
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-between;
+}
+
+.date
+{
+    background-color: #fff;
+    padding: 0.5rem;
+    border-left: solid 0.5rem #00C09E;
+    border-radius: 0.2rem;
+    margin: 1rem;
+
+}
+
+.calendar, .timer
+{
+    display: flex;
+    color: #828C95;
+    align-items: center;
+}
+
+
+
+.calendar img, .timer img
+{
+    width: 1.563rem;
+    height: 1.563rem;
+    margin-right: 0.3rem;
+}
+.lastBook
+{
+    background-color: #fff;
+    margin: 1rem;
+    padding: 2rem;
+}
+
+table
+{
+    border: solid 0.1rem #ccc;
+    border-collapse: collapse;
+}
+tr{
+    border: solid 0.1rem #ccc;
+}
+tr th
+{
+
+    background-color: #00C09E;
+    color: #fff;
+    padding: 0.3rem;
+}
+
+tr td {
+    padding: 0.3rem;
+}
+
+tr:nth-child(odd)
+{
+    background-color: #fff;
+}
+
+tr:nth-child(even)
+{
+    background-color: #FFFDE8;
+}
+form
+{
+    display: inline-block;
+}
+
+/*Media queries*/
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3) {
+
+    .container
+    {
+        display: block;
+    }
+
+    .container .row:nth-child(1) {
+        padding:0 0.5rem 0 0.5rem;
+        flex: 0.651;
+    }
+}

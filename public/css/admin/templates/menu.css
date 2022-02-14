@@ -1,0 +1,63 @@
+
+li{
+    list-style: none;
+
+}
+.menuDeroulant
+{
+    display: none;
+    align-items: center;
+}
+.menuDeroulant img{
+    width: 1rem;
+    height: 1rem;
+}
+.menuDeroulant h3{
+    margin: 0 0;
+}
+.verticalMenu h3
+{
+    border-bottom: solid 1px #C3CBD2;
+}
+
+a{
+    text-decoration: none;
+    color: #C3CBD2;
+}
+.book h3,.customer h3,.loan h3{
+    color: #828C95;
+    margin: 1rem 1rem 0.5rem 0;
+}
+.verticalMenu h2, .menuDeroulant h3 {
+    color: #828C95;
+    margin: 1rem 1rem 0.5rem 0.5rem;
+    background-color: #F3F4F7;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+
+}
+ul{
+    padding: 0.5rem;
+}
+
+/*Media queries*/
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3) {
+
+    body
+    {
+        font-size: 12px ;
+    }
+    .menuDeroulant
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
