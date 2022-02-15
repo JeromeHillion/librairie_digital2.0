@@ -31,7 +31,7 @@
             </div>
 
             <div class="lastBook">
-                <h3>Derniers livres ajoutés</h3>
+                <h2>Derniers livres ajoutés</h2>
                 <table>
                     <thead>
                     <tr>

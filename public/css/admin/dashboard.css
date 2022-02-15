@@ -101,4 +101,21 @@ and (-webkit-min-device-pixel-ratio: 3) {
         padding:0 0.5rem 0 0.5rem;
         flex: 0.651;
     }
+
+    .date{
+        padding: 0.3rem;
+    }
+
+    .calendar h2, .lastBook h2  {
+        font-size:0.8rem;
+    }
+    .timer h3{
+        font-size:0.7rem;
+    }
+
+    .calendar img, .timer img{
+        width: 1rem;
+        height: 1rem;
+    }
+
 }

@@ -14,8 +14,9 @@
     </div>
   <div class="containerRight">
       <div class="subMenuParams">
-          <a href="#">Page d'accueil</a>
+          <a href="#"><img src="../../../public/css/admin/icones/accueil.png" alt=""><h3>Page d'accueil</h3></a>
       </div>
   </div>
 
 </div>
+<script src="../../../public/js/admin/templates/navbar.js"></script>

@@ -23,3 +23,4 @@ include_once 'navbar.php';
         <a href="#"><li>Liste des emprunt</li></a>
     </ul>
 </div>
+<script src="../../../public/js/admin/templates/menu.js"></script>

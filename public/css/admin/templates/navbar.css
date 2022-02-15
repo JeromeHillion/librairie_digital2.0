@@ -50,7 +50,7 @@ body, html{
     height: 1rem;
 }
 
-.subMenu a{
+.subMenu a, .subMenuParams a{
     background-color: #2E3439;
     color: #727F89;
     text-decoration: none;
@@ -62,22 +62,14 @@ body, html{
     font-size: 0.7rem;
 }
 
-.subMenuParams a{
-    background-color: #2E3439;
-    color: #727F89;
-    text-decoration: none;
-    padding: 0.4rem;
-    border-radius: 0.3rem;
-    font-weight: bold;
-    font-size: 0.8rem;
-}
+
 
 .subMenu:hover, .subMenuParams:hover
 {
     color: #fff;
 }
 
-.subMenu h3{
+.subMenu h3, .subMenuParams h3{
 
     margin: 0.1rem 0.5rem 0 0.5rem;
 }
