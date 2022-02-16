@@ -1,9 +1,14 @@
+body{
+    background-color: #EEF0F3;
+    font-size: 16px;
+}
 .container{
     display: flex;
+    flex-direction: column;
 
 
 }
-.container .row:nth-child(1){
+/*.container .row:nth-child(1){
     padding: 1rem;
     flex: 0.651;
 }
@@ -14,7 +19,7 @@
     display: flex;
     flex-direction: column ;
     justify-content: space-between;
-}
+}*/
 
 .date
 {
@@ -24,6 +29,16 @@
     border-radius: 0.2rem;
     margin: 1rem;
 
+}
+
+.date h2
+{
+font-size: 0.8rem;
+}
+
+.date h3
+{
+font-size: 0.7rem;
 }
 
 .calendar, .timer
@@ -37,21 +52,24 @@
 
 .calendar img, .timer img
 {
-    width: 1.563rem;
-    height: 1.563rem;
+    width: 1rem;
+    height: 1rem;
     margin-right: 0.3rem;
 }
 .lastBook
 {
     background-color: #fff;
     margin: 1rem;
-    padding: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 table
 {
     border: solid 0.1rem #ccc;
     border-collapse: collapse;
+    align-items: center;
 }
 tr{
     border: solid 0.1rem #ccc;
@@ -62,10 +80,12 @@ tr th
     background-color: #00C09E;
     color: #fff;
     padding: 0.3rem;
+    font-size: 0.7rem;
 }
 
 tr td {
     padding: 0.3rem;
+    font-size: 0.7rem;
 }
 
 tr:nth-child(odd)
@@ -76,6 +96,13 @@ tr:nth-child(odd)
 tr:nth-child(even)
 {
     background-color: #FFFDE8;
+}
+
+.btnDetail{
+    color: #828C95;
+    background-color: #F3F4F7;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
 }
 form
 {

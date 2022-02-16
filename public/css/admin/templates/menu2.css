@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    font-size: 16px;
+}
+
+.containerGeneral{
+    display: flex;
+}
+
+.menuLateral {
+    flex: 0.5;
+    background-color: #ffffff;
+
+}
+
+.menuLateral ul{
+    margin: 0;
+    padding: 0;
+}
+
+.menuLateral ul li{
+    list-style: none;
+    padding-left: 0.5rem;
+}
+
+.menuLateral ul li:nth-child(1){
+    background-color: #00C09E;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-top: 0.58rem;
+    padding-bottom: 0.58rem;
+}
+
+.menuLateral ul li:nth-child(2),
+.menuLateral ul li:nth-child(3),
+.menuLateral ul li:nth-child(6),
+.menuLateral ul li:nth-child(9){
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0 0.5rem 0;
+    color: #3F464C;
+}
+
+.menuLateral ul li:nth-child(4),
+.menuLateral ul li:nth-child(5),
+.menuLateral ul li:nth-child(7),
+.menuLateral ul li:nth-child(8),
+.menuLateral ul li:nth-child(10){
+    font-size: 0.8rem;
+    color: #727F89;
+}
+
+.menuHorizontal{
+    flex: 3;
+
+}
+.subMenu{
+    display: flex;
+    justify-content: space-between;
+    background-color: #3F464C;
+    padding: 0.5rem;
+}
+
+
+.subMenu p{
+    margin: 0;
+    color: #ffffff;
+}
+
+.subMenu a{
+    text-decoration: none;
+    color: #cccc;
+    background-color: #2E3439;
+    border-radius: 0.2rem;
+    font-size: 0.6rem;
+    padding: 0.3rem;
+}
+
+.subMenu a:hover{
+    color: #fff;
+}

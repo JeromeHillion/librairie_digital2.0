@@ -23,37 +23,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
     showDate();
     showTime();
+    if (screen.width === 414 && screen.height === 736) {
+        let tableTh = document.querySelectorAll('table tr th');
+        tableTh.forEach(function (item) {
 
-    let tableTh= document.querySelectorAll('table tr th');
-    tableTh.forEach(function (item){
+            switch (item.innerText) {
+                case 'ISBN':
+                    item.remove();
+                    break;
+                case 'Date de publication':
+                    item.remove();
+                    break;
+            }
 
-       switch (item.innerText)
-       {
-           case 'ISBN':
-               item.remove();
-               break;
-           case 'Date de publication':
-               item.remove();
-               break;
-       }
+        });
 
-    });
+        let tbodyTd = document.querySelectorAll('table tbody tr td');
+        tbodyTd.forEach(function (item) {
 
-    let tbodyTd = document.querySelectorAll('table tbody tr td');
-    tbodyTd.forEach(function (item) {
+            /*console.log(item);*/
 
-        console.log(item);
-
-        /*switch (item.colSpan)
-        {
-            case 1:
-                item.remove();
-                break;
-            case 2:
-                item.remove();
-                break;
-        }*/
-    });
+            switch (item.className) {
+                case "isbn":
+                    item.remove();
+                    break;
+                case "publication":
+                    item.remove();
+                    break;
+            }
+        });
+    }
 });
 
 function showDate() {

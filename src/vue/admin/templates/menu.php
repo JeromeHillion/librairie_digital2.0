@@ -4,10 +4,9 @@ include_once 'navbar.php';
 
 <div class="menuDeroulant">
     <h3>Accueil</h3>
-    <img src="../../../public/css/admin/icones/interface-de-tableau-de-bord.png" alt="icone menu">
 </div>
 <div class="verticalMenu">
-    <a href="#"><h2>Accueil</h2></a>
+    <a href="#"><h3>Accueil</h3></a>
     <ul class="book">
        <h3><li>Livres</li></h3>
         <a href="#"><li>Gestion  des livres</li></a>
@@ -23,4 +22,3 @@ include_once 'navbar.php';
         <a href="#"><li>Liste des emprunt</li></a>
     </ul>
 </div>
-<script src="../../../public/js/admin/templates/menu.js"></script>

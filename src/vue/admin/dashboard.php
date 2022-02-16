@@ -6,32 +6,22 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../../public/css/normalize.css">
-    <link rel="stylesheet" href="../../../public/css/admin/templates/navbar.css">
-    <link rel="stylesheet" href="../../../public/css/admin/templates/menu.css">
+    <link rel="stylesheet" href="../../../public/css/admin/templates/menu2.css">
     <link rel="stylesheet" href="../../../public/css/admin/dashboard.css">
 
     <title>Document</title>
 </head>
 <body>
 
-
 <div class="containerGeneral">
     <?php
-    include_once 'templates/navbar.php';
+    include_once 'templates/menu2.php';
     ?>
     <div class="container">
-        <div class="row">
-            <?php
-            include_once 'templates/menu.php';
-            ?>
-        </div>
-        <div class="row">
             <div class="date">
-
             </div>
-
             <div class="lastBook">
-                <h2>Derniers livres ajoutés</h2>
+                <h4>Derniers livres ajoutés</h4>
                 <table>
                     <thead>
                     <tr>
@@ -48,20 +38,16 @@
 
                     <tr>
 
-                        <td><?= $book['isbn']; ?></td>
-                        <td><?= $book['name']; ?>
-                        <td><?= $book['publication']; ?></td>
-                        <td><?= $book['category']; ?></td>
-                        <td><?= $book['author']; ?></td>
+                        <td class="isbn"><?= $book['isbn']; ?></td>
+                        <td class="name"><?= $book['name']; ?>
+                        <td class="publication"><?= $book['publication']; ?></td>
+                        <td class="category"><?= $book['category']; ?></td>
+                        <td class="author"><?= $book['author']; ?></td>
 
                         <td>
-                            <form action="DetailsBookController.php" method="POST">
+                            <form action="book/DetailsBookController.php" method="POST">
                                 <input type="hidden" name="isbn" value="<?= $book['isbn'] ?>">
                                 <input class="btnDetail" type="submit" value="détails">
-                            </form>
-                            <form action="crud/addBookFormController.php" method="POST">
-                                <input type="hidden" name="isbn" value="<?= $book['isbn'] ?>">
-                                <input class="btnAdd" type="submit" value="Ajouter">
                             </form>
                         </td>
                     </tr>
@@ -70,11 +56,11 @@
                 </table>
             </div>
         </div>
-    </div>
-
-
 </div>
+
+
 <script src="../../../public/js/admin/dashboard.js"></script>
+<script src="../../../public/js/admin/templates/navbar.js"></script>
 </body>
 </html>
 

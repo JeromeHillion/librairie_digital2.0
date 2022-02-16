@@ -1,5 +1,8 @@
 'use strict'
 
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
 
     if (screen.width === 414 && screen.height === 736) {

@@ -5,35 +5,41 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../../../public/css/normalize.css">
+    <link rel="stylesheet" href="../../../../public/css/normalize.css">
+    <link rel="stylesheet" href="../../../../public/css/admin/templates/menu2.css">
+    <link rel="stylesheet" href="../../../../public/css/admin/book/detailsBook.css">
+
     <title>Librairie digital - Détails livre</title>
 </head>
 <body>
 <div class="containerGeneral">
-
+    <?php
+    include_once '../../../vue/admin/templates/menu2.php';
+    ?>
     <?php if ($book) :?>
 
     <div class="container">
         <?php if ($book['data']['language'] === "Français") :?>
-        <h2><?= $book['data']['categories']?></h2>
-        <h1><?= $book['data']['title']?></h1>
-        <h3>De: </h3>
+            <h3><?= $book['data']['title']?></h3>
+            <p><?= $book['data']['categories']?></p>
+        <p>De:
             <?php foreach ($book['data']['authors'] as $author):?>
-                <h3><?=$author ?></h3>
+               <?=$author ?>
             <?php endforeach;?>
-        <h2><?= $book['data']['publishedDate']?></h2>
+            </p>
+        <p><?= $book['data']['publishedDate']?></p>
         <img src="<?= $book['data']['imageLinks']?>" alt="thumbnail">
-        <h2>Résumé</h2>
+        <p>Résumé</p>
         <p> <?= $book['data']['description']?></p>
         <?php endif; ?>
 
         <?php if ($book['data']['language'] === "English") :?>
-        <h2><?= $book['data']['categories']?></h2>
-        <h1><?= $book['data']['title']?></h1>
+            <h3><?= $book['data']['title']?></h3>
+            <p><?= $book['data']['categories']?></p>
         <?php foreach ($book['data']['authors'] as $author):?>
-        <h3>By: <?=$author ?></h3>
+        <p>By: <?=$author ?></p>
         <?php endforeach;?>
-        <h2><?= $book['data']['publishedDate']?></h2>
+        <p><?= $book['data']['publishedDate']?></p>
         <img src="<?= $book['data']['imageLinks']?>" alt="thumbnail">
             <h2>Summary</h2>
         <p><?= $book['data']['description']?></p>
@@ -41,7 +47,7 @@
         <hr>
 
         <?php if ($book['data']['language'] === "Français") :?>
-            <h2>Description du produit</h2>
+            <h3>Description du produit</h3>
             <p>ISBN: <?= $book['data']['isbn']?></p>
             <p>Nombre de pages: <?= $book['data']['pageCount']?></p>
             <p>Langue: <?= $book['data']['language']?></p>
@@ -61,10 +67,10 @@
             <input class="btnAdd" type="submit" value="Ajouter">
         </form>
 
-
-    </div>
     <?php endif;?>
-
+    </div>
 </div>
+<script src="../../../../public/js/admin/templates/navbar.js"></script>
+<script src="../../../../public/js/admin/templates/menu.js"></script>
 </body>
 </html>
