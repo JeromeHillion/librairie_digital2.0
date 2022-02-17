@@ -12,8 +12,8 @@
     <li>Tableau de bord</li>
     <li>Accueil</li>
     <li>Livres</li>
+    <a href=""><li>Ajouter un livre</li></a>
     <li>Gestion des livres</li>
-    <li>Catalogue</li>
     <li>Utilisateurs</li>
     <li>Gestion des utilisateurs</li>
     <li>Liste des utilisateur</li>

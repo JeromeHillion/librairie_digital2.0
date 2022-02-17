@@ -32,13 +32,26 @@ body{
     padding-bottom: 0.58rem;
 }
 
+.menuLateral ul li:nth-child(2)
+{
+    margin: 1rem 0 1rem 0;
+}
+
+
+.menuLateral ul li:nth-child(3),
+.menuLateral ul li:nth-child(6),
+.menuLateral ul li:nth-child(9){
+
+    margin: 0.5rem 0 0.5rem 0;
+
+}
+
 .menuLateral ul li:nth-child(2),
 .menuLateral ul li:nth-child(3),
 .menuLateral ul li:nth-child(6),
 .menuLateral ul li:nth-child(9){
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    margin: 0.5rem 0 0.5rem 0;
     color: #3F464C;
 }
 
@@ -47,7 +60,7 @@ body{
 .menuLateral ul li:nth-child(7),
 .menuLateral ul li:nth-child(8),
 .menuLateral ul li:nth-child(10){
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #727F89;
 }
 

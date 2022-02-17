@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../../public/css/normalize.css">
+    <link rel="stylesheet" href="../../../../public/css/admin/templates/menu2.css">
+    <link rel="stylesheet" href="../../../../public/css/admin/book/book.css">
 
 
     <title>Librairie digital - Ajout livre</title>
@@ -13,9 +15,11 @@
 
 <body>
 <div class="containerGeneral">
-
+    <?php
+    include_once '../../../vue/admin/templates/menu2.php';
+    ?>
     <div class="container">
-
+<div class="search">
         <h1>Rechercher un livre</h1>
 
         <form id="search" action="BookController.php" method="POST">
@@ -25,7 +29,7 @@
             <input type="submit">
             <span id="error"></span>
         </form>
-
+</div>
         <div class="result">
             <?php if ($books) : ?>
                 <h1>Résultat de la recherche</h1>
