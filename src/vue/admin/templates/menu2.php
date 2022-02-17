@@ -8,18 +8,17 @@
 <body>-->
 <!--<div class="containerGeneral">-->
 <div class="menuLateral">
-<ul>
-    <li>Tableau de bord</li>
-    <li>Accueil</li>
-    <li>Livres</li>
-    <a href=""><li>Ajouter un livre</li></a>
-    <li>Gestion des livres</li>
-    <li>Utilisateurs</li>
-    <li>Gestion des utilisateurs</li>
-    <li>Liste des utilisateur</li>
-    <li>Emprunts</li>
-    <li>Liste des emprunts</li>
-</ul>
+    <p>Tableau de bord</p>
+    <p>Accueil</p>
+    <p>Livres</p>
+    <a href="">Ajouter un livre</a>
+    <a href="">Gestion des livres</a>
+    <p>Utilisateurs</p>
+    <a href="">Gestion des utilisateurs</a>
+    <a href="">Liste des utilisateur</a>
+    <p>Emprunts</p>
+    <a href="">Liste des emprunts</a>
+
 </div>
     <div class="menuHorizontal">
         <div class="subMenu">

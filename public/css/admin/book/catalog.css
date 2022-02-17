@@ -1,0 +1,62 @@
+body{
+    background-color: #EEF0F3;
+    font-size: 16px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 1rem;
+    padding: 1rem;
+
+
+}
+
+table
+{
+    border: solid 0.1rem #ccc;
+    border-collapse: collapse;
+    align-items: center;
+}
+tr{
+    border: solid 0.1rem #ccc;
+}
+tr th
+{
+
+    background-color: #008168;
+    color: #fff;
+    padding: 0.3rem;
+    font-size:1rem;
+}
+
+tr td {
+    padding: 0.3rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+tr:nth-child(odd)
+{
+    background-color: #fff;
+}
+
+tr:nth-child(even)
+{
+    background-color: #E0F2F1;
+}
+
+input[type="submit"]{
+    color: #00C09E;
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    border: solid 1px #00C09E;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background-color: #008168;
+    color: #fff;
+
+}

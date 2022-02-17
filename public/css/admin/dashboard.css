@@ -25,7 +25,7 @@ body{
 {
     background-color: #fff;
     padding: 0.5rem;
-    border-left: solid 0.5rem #00C09E;
+    border-left: solid 0.5rem #008168;
     border-radius: 0.2rem;
     margin: 1rem;
 
@@ -33,18 +33,19 @@ body{
 
 .date h2
 {
-font-size: 0.8rem;
+font-size: 1.25rem;
+    color: #727F89;
 }
 
 .date h3
 {
-font-size: 0.7rem;
+font-size: 1.125rem;
+    color: #A7B8C5;
 }
 
 .calendar, .timer
 {
     display: flex;
-    color: #828C95;
     align-items: center;
 }
 
@@ -77,15 +78,16 @@ tr{
 tr th
 {
 
-    background-color: #00C09E;
+    background-color: #008168;
     color: #fff;
     padding: 0.3rem;
-    font-size: 0.7rem;
+    font-size:1rem;
 }
 
 tr td {
     padding: 0.3rem;
-    font-size: 0.7rem;
+    font-size: 1rem;
+    text-align: center;
 }
 
 tr:nth-child(odd)
@@ -95,14 +97,24 @@ tr:nth-child(odd)
 
 tr:nth-child(even)
 {
-    background-color: #FFFDE8;
+    background-color: #E0F2F1;
 }
 
 .btnDetail{
-    color: #828C95;
-    background-color: #F3F4F7;
-    padding: 0.2rem;
+    color: #00C09E;
+    background-color: #fff;
+    padding: 0.5rem;
     border-radius: 0.2rem;
+    border: solid 1px #00C09E;
+    cursor: pointer;
+
+
+}
+
+.btnDetail:hover{
+    background-color: #008168;
+    color: #fff;
+
 }
 form
 {

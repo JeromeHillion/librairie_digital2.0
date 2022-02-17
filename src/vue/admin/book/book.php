@@ -19,73 +19,73 @@
     include_once '../../../vue/admin/templates/menu2.php';
     ?>
     <div class="container">
-<div class="search">
-        <h1>Rechercher un livre</h1>
+        <div class="search">
+            <h2>Rechercher un livre</h2>
 
-        <form id="search" action="BookController.php" method="POST">
-            <h3>Taper le nom du livre que vous souhaitez rechercher</h3>
-            <label for="name"></label>
-            <input type="text" name="name" id="name">
-            <input type="submit">
-            <span id="error"></span>
-        </form>
-</div>
+            <form id="search" action="BookController.php" method="POST">
+                <h3>Taper le nom du livre que vous souhaitez rechercher</h3>
+                <label for="name"></label>
+                <input type="text" name="name" id="name">
+                <input type="submit">
+                <span id="error"></span>
+            </form>
+        </div>
+        <?php if ($books) : ?>
         <div class="result">
-            <?php if ($books) : ?>
-                <h1>Résultat de la recherche</h1>
-                <table>
-                    <thead>
+            <h3>Résultat de la recherche</h3>
+            <table>
+                <thead>
+                <tr>
+                    <th>ISBN</th>
+                    <th>Nom</th>
+                    <th>Date de publication</th>
+                    <th>Catégorie</th>
+                    <th>Auteur(e)</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <?php foreach ($books as $book): ?>
                     <tr>
-                        <th>ISBN</th>
-                        <th>Nom</th>
-                        <th>Date de publication</th>
-                        <th>Catégorie</th>
-                        <th>Auteur(e)</th>
-                        <th>Action</th>
-                    </tr>
-                    </thead>
-                    <tbody>
 
-                    <?php foreach ($books as $book): ?>
-                        <tr>
+                        <td><?= $book['isbn']; ?></td>
+                        <td><?= $book['name']; ?>
+                        <td><?= $book['publication']; ?></td>
 
-                            <td><?= $book['isbn']; ?></td>
-                            <td><?= $book['name']; ?>
-                            <td><?= $book['publication']; ?></td>
+                        <?php if ($book['categorie']): ?>
+                            <?php foreach ($book['categorie'] as $categorie): ?>
+                                <td><?= $categorie; ?></td>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <td>non comuniqué</td>
+                        <?php endif; ?>
 
-                            <?php if ($book['categorie']): ?>
-                                <?php foreach ($book['categorie'] as $categorie): ?>
-                                    <td><?= $categorie; ?></td>
-                                <?php endforeach; ?>
-                            <?php else: ?>
-                                <td>non comuniqué</td>
-                            <?php endif; ?>
-
-                            <?php if ($book['authors']): ?>
-                                <td>
-                                <?php foreach ($book['authors'] as $author): ?>
-                                   <?= $author; ?>
-                                <?php endforeach; ?>
-                                </td>
-                            <?php else: ?>
-                                <td>non comuniqué</td>
-                            <?php endif; ?>
-
+                        <?php if ($book['authors']): ?>
                             <td>
-                                <form action="DetailsBookController.php" method="POST">
-                                    <input type="hidden" name="isbn" value="<?= $book['isbn'] ?>">
-                                    <input class="btnDetail" type="submit" value="détails">
-                                </form>
-                                <form action="crud/addBookFormController.php" method="POST">
-                                    <input type="hidden" name="isbn" value="<?= $book['isbn'] ?>">
-                                    <input class="btnAdd" type="submit" value="Ajouter">
-                                </form>
+                                <?php foreach ($book['authors'] as $author): ?>
+                                    <?= $author; ?>
+                                <?php endforeach; ?>
                             </td>
-                        </tr>
-                    <?php endforeach; ?>
+                        <?php else: ?>
+                            <td>non comuniqué</td>
+                        <?php endif; ?>
 
-                    </tbody>
-                </table>
+                        <td>
+                            <form action="DetailsBookController.php" method="POST">
+                                <input type="hidden" name="isbn" value="<?= $book['isbn'] ?>">
+                                <input class="btnDetail" type="submit" value="détails">
+                            </form>
+                            <form action="crud/addBookFormController.php" method="POST">
+                                <input type="hidden" name="isbn" value="<?= $book['isbn'] ?>">
+                                <input class="btnAdd" type="submit" value="Ajouter">
+                            </form>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+
+                </tbody>
+            </table>
             <?php endif; ?>
         </div>
 

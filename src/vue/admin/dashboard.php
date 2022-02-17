@@ -21,7 +21,7 @@
             <div class="date">
             </div>
             <div class="lastBook">
-                <h4>Derniers livres ajoutés</h4>
+                <h3>Derniers livres ajoutés</h3>
                 <table>
                     <thead>
                     <tr>
@@ -47,7 +47,7 @@
                         <td>
                             <form action="book/DetailsBookController.php" method="POST">
                                 <input type="hidden" name="isbn" value="<?= $book['isbn'] ?>">
-                                <input class="btnDetail" type="submit" value="détails">
+                                <input class="btnDetail" type="submit" value="Détails">
                             </form>
                         </td>
                     </tr>

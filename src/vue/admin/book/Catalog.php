@@ -16,44 +16,43 @@
     include_once '../../../vue/admin/templates/menu2.php';
     ?>
     <div class="container">
-        <?php if($books):?>
-        <table>
-            <thead>
-            <tr>
-                <th>ISBN</th>
-                <th>Nom</th>
-                <th>Date de publication</th>
-                <th>Catégorie</th>
-                <th>Auteur(e)</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-            <tbody>
-
-            <?php foreach ($books as $book): ?>
+        <div class="section">
+            <h3>Catalogue</h3>
+        </div>
+        <?php if ($books): ?>
+            <table>
+                <thead>
                 <tr>
+                    <th>ISBN</th>
+                    <th>Nom</th>
+                    <th>Date de publication</th>
+                    <th>Catégorie</th>
+                    <th>Auteur(e)</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
 
-                    <td><?= $book['isbn']; ?></td>
-                    <td><?= $book['name']; ?>
-                    <td><?= $book['publication']; ?></td>
-                            <td><?= $book['category'] ?></td>
+                <?php foreach ($books as $book): ?>
+                    <tr>
+
+                        <td><?= $book['isbn']; ?></td>
+                        <td><?= $book['name']; ?>
+                        <td><?= $book['publication']; ?></td>
+                        <td><?= $book['category'] ?></td>
                         <td> <?= $book['author'] ?>  </td>
 
-                    <td>
-                        <form action="DetailsBookController.php" method="POST">
-                            <input type="hidden" name="isbn" value="<?= $book['isbn'] ?>">
-                            <input class="btnDetail" type="submit" value="détails">
-                        </form>
-                        <form action="crud/addBookFormController.php" method="POST">
-                            <input type="hidden" name="isbn" value="<?= $book['isbn'] ?>">
-                            <input class="btnAdd" type="submit" value="Ajouter">
-                        </form>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
+                        <td>
+                            <form action="DetailsBookController.php" method="POST">
+                                <input type="hidden" name="isbn" value="<?= $book['isbn'] ?>">
+                                <input class="btnDetail" type="submit" value="détails">
+                            </form>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
 
-            </tbody>
-        </table>
+                </tbody>
+            </table>
         <?php endif; ?>
 
     </div>

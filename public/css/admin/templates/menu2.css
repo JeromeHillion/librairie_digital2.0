@@ -1,6 +1,7 @@
 body{
     margin: 0;
     font-size: 16px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .containerGeneral{
@@ -8,60 +9,55 @@ body{
 }
 
 .menuLateral {
+    display: flex;
+    flex-direction: column;
     flex: 0.5;
     background-color: #ffffff;
-
 }
 
-.menuLateral ul{
-    margin: 0;
-    padding: 0;
+.menuLateral p, .menuLateral a {
+    padding-left: 1rem;
 }
 
-.menuLateral ul li{
-    list-style: none;
-    padding-left: 0.5rem;
+.menuLateral p {
+    padding-left: 1rem;
+    margin: 0.5rem 0 0.5rem 0;
+    color: #3F464C;
 }
 
-.menuLateral ul li:nth-child(1){
+.menuLateral a  {
+    text-decoration: none;
+    margin-top: 0.5rem ;
+    color: #727F89;
+}
+
+.menuLateral a:hover  {
+    color: #008168;
+}
+
+.menuLateral p:nth-child(1){
     background-color: #00C09E;
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    padding-top: 0.58rem;
-    padding-bottom: 0.58rem;
-}
-
-.menuLateral ul li:nth-child(2)
-{
-    margin: 1rem 0 1rem 0;
-}
-
-
-.menuLateral ul li:nth-child(3),
-.menuLateral ul li:nth-child(6),
-.menuLateral ul li:nth-child(9){
-
-    margin: 0.5rem 0 0.5rem 0;
+    padding-top: 0.78rem;
+    padding-bottom: 0.78rem;
+    margin: 0;
 
 }
 
-.menuLateral ul li:nth-child(2),
-.menuLateral ul li:nth-child(3),
-.menuLateral ul li:nth-child(6),
-.menuLateral ul li:nth-child(9){
-    font-size: 1.5rem;
+.menuLateral p:nth-child(2),
+.menuLateral p:nth-child(3),
+.menuLateral  p:nth-child(6),
+.menuLateral  p:nth-child(9){
+    font-size: 1.25rem;
     font-weight: bold;
     color: #3F464C;
 }
 
-.menuLateral ul li:nth-child(4),
-.menuLateral ul li:nth-child(5),
-.menuLateral ul li:nth-child(7),
-.menuLateral ul li:nth-child(8),
-.menuLateral ul li:nth-child(10){
-    font-size: 1rem;
-    color: #727F89;
+.menuLateral a:nth-child(5),
+.menuLateral a:nth-child(8){
+    margin-bottom: 1rem;
 }
 
 .menuHorizontal{
@@ -79,6 +75,8 @@ body{
 .subMenu p{
     margin: 0;
     color: #ffffff;
+    align-self: center;
+    font-weight: bold;
 }
 
 .subMenu a{
@@ -86,8 +84,8 @@ body{
     color: #cccc;
     background-color: #2E3439;
     border-radius: 0.2rem;
-    font-size: 0.6rem;
-    padding: 0.3rem;
+    font-size: 1rem;
+    padding: 0.4rem;
 }
 
 .subMenu a:hover{
