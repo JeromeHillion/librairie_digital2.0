@@ -5,24 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../../public/css/normalize.css">
-    <link rel="stylesheet" href="../../../../public/css/admin/templates/menu2.css">
-    <link rel="stylesheet" href="../../../../public/css/admin/book/book.css">
+    <link rel="stylesheet" href="../../../public/css/normalize.css">
+    <link rel="stylesheet" href="../../../public/css/admin/templates/menu2.css">
+    <link rel="stylesheet" href="../../../public/css/admin/book/searchBook.css">
 
 
-    <title>Librairie digital - Ajout livre</title>
+    <title>Librairie digital - Rechercher un  livre</title>
 </head>
 
 <body>
 <div class="containerGeneral">
     <?php
-    include_once '../../../vue/admin/templates/menu2.php';
+    include_once '../../vue/admin/templates/menu2.php';
     ?>
     <div class="container">
         <div class="search">
             <h2>Rechercher un livre</h2>
 
-            <form id="search" action="BookController.php" method="POST">
+            <form id="search" action="SearchBookController.php" method="POST">
                 <h3>Taper le nom du livre que vous souhaitez rechercher</h3>
                 <label for="name"></label>
                 <input type="text" name="name" id="name">
@@ -76,7 +76,7 @@
                                 <input type="hidden" name="isbn" value="<?= $book['isbn'] ?>">
                                 <input class="btnDetail" type="submit" value="détails">
                             </form>
-                            <form action="crud/addBookFormController.php" method="POST">
+                            <form action="addBookFormController.php" method="POST">
                                 <input type="hidden" name="isbn" value="<?= $book['isbn'] ?>">
                                 <input class="btnAdd" type="submit" value="Ajouter">
                             </form>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../../../public/css/admin/templates/menu2.css">
     <link rel="stylesheet" href="../../../public/css/admin/dashboard.css">
 
-    <title>Document</title>
+    <title>Librairie digital - Tableau de bord</title>
 </head>
 <body>
 
@@ -45,7 +45,7 @@
                         <td class="author"><?= $book['author']; ?></td>
 
                         <td>
-                            <form action="book/DetailsBookController.php" method="POST">
+                            <form action="DetailsBookController.php" method="POST">
                                 <input type="hidden" name="isbn" value="<?= $book['isbn'] ?>">
                                 <input class="btnDetail" type="submit" value="Détails">
                             </form>

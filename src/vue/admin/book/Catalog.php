@@ -5,15 +5,15 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../../../../public/css/normalize.css">
-    <link rel="stylesheet" href="../../../../public/css/admin/templates/menu2.css">
-    <link rel="stylesheet" href="../../../../public/css/admin/book/catalog.css">
+    <link rel="stylesheet" href="../../../public/css/normalize.css">
+    <link rel="stylesheet" href="../../../public/css/admin/templates/menu2.css">
+    <link rel="stylesheet" href="../../../public/css/admin/book/catalog.css">
     <title>Catalogue</title>
 </head>
 <body>
 <div class="containerGeneral">
     <?php
-    include_once '../../../vue/admin/templates/menu2.php';
+    include_once '../../vue/admin/templates/menu2.php';
     ?>
     <div class="container">
         <div class="section">

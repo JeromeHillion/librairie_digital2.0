@@ -5,7 +5,7 @@ use App\manager\GoogleBooksApiManager;
 
 ini_set('display_errors', true);
 
-require '../../../../vendor/autoload.php';
+require '../../../vendor/autoload.php';
 
 $googleBooksApiManager = new  GoogleBooksApiManager();
 
@@ -17,4 +17,4 @@ else{
     $book = $googleBooksApiManager->getBookByIsbn($_POST['isbn']);
 }
 
-require '../../../vue/admin/book/detailsBook.php';
+require '../../vue/admin/book/detailsBook.php';

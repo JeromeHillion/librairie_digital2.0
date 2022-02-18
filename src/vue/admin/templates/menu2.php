@@ -1,18 +1,12 @@
-<!--<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="../../../../public/css/admin/templates/menu2.css">
-</head>
-<body>-->
-<!--<div class="containerGeneral">-->
+
 <div class="menuLateral">
-    <p>Tableau de bord</p>
-    <p>Accueil</p>
+    <div class="dashboard">
+        <img src="../../../public/css/admin/icones/interface-de-tableau-de-bord.png" alt="icone tableau de bord"><a href="DashboardController.php">Tableau de bord</a>
+    </div>
+        <p>Accueil</p>
     <p>Livres</p>
-    <a href="">Ajouter un livre</a>
-    <a href="">Gestion des livres</a>
+    <a href="SearchBookController.php">Ajouter un livre</a>
+    <a href="CatalogController.php">Gestion des livres</a>
     <p>Utilisateurs</p>
     <a href="">Gestion des utilisateurs</a>
     <a href="">Liste des utilisateur</a>
@@ -22,11 +16,7 @@
 </div>
     <div class="menuHorizontal">
         <div class="subMenu">
-        <a href="#">Ajouter un livre</a>
+            <a href="SearchBookController.php"><img src="../../../public/css/admin/icones/ajouter-un-bouton.png" alt="icone plus">Ajouter un livre </a>
         <p>Librairie digital</p>
-        <a href="#">Page d'accueil</a>
+        <a href="#"><img src="../../../public/css/admin/icones/accueil.png" alt="icone accueil">Page d'accueil</a>
         </div>
-    <!--</div>-->
-
-<!--</body>
-</html>-->

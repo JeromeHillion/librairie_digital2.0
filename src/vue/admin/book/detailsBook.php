@@ -5,16 +5,16 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../../../../public/css/normalize.css">
-    <link rel="stylesheet" href="../../../../public/css/admin/templates/menu2.css">
-    <link rel="stylesheet" href="../../../../public/css/admin/book/detailsBook.css">
+    <link rel="stylesheet" href="../../../public/css/normalize.css">
+    <link rel="stylesheet" href="../../../public/css/admin/templates/menu2.css">
+    <link rel="stylesheet" href="../../../public/css/admin/book/detailsBook.css">
 
     <title>Librairie digital - Détails livre</title>
 </head>
 <body>
 <div class="containerGeneral">
     <?php
-    include_once '../../../vue/admin/templates/menu2.php';
+    include_once '../../vue/admin/templates/menu2.php';
     ?>
     <?php if ($book) : ?>
 
@@ -47,7 +47,7 @@
                 <p><span>Langue : </span> <?= $book['data']['language'] ?></p>
                 <p><span>Catégorie:</span> <?= $book['data']['categories'] ?></p>
             <?php endif; ?>
-            <form action="crud/addBookFormController.php" method="POST">
+            <form action="addBookFormController.php" method="POST">
                 <input type="hidden" name="isbn" value="<?= $book['data']['isbn'] ?>">
                 <input class="btnAdd" type="submit" value="Ajouter">
             </form>
@@ -75,7 +75,7 @@
             <p><span>Number of pages : </span><?= $book['data']['pageCount'] ?></p>
             <p><span>Language :</span> <?= $book['data']['language'] ?></p>
             <p><span>Category : </span><?= $book['data']['categories'] ?></p>
-            <form action="crud/addBookFormController.php" method="POST">
+            <form action="addBookFormController.php" method="POST">
                 <input type="hidden" name="isbn" value="<?= $book['data']['isbn'] ?>">
                 <input class="btnAdd" type="submit" value="Ajouter">
             </form>
