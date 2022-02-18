@@ -6,23 +6,67 @@ body{
 .container{
     display: flex;
     flex-direction: column;
-    padding: 1rem;
 }
-
-.container .row:nth-child(1){
-    padding: 1rem;
-    flex: 0.617;
+.container span{
+    font-weight: bold;
 }
-.container .row:nth-child(2){
-    padding: 2rem;
-    flex: 2;
-    background-color: #EEF0F3;
+.info{
     display: flex;
-    flex-direction: column ;
-    justify-content: space-between;
+    justify-content: center;
+    background-color: #fff;
+    border-left: solid 0.5rem #008168;
+    border-radius: 0.2rem;
+    margin: 1rem;
+
+}
+.details, .picture{
+    padding: 2rem;
+}
+.details{
+
+    flex: 3;
+}
+details h3{}
+
+.picture{
+
+    flex:2;
+}
+.picture img{
+    width: 15rem;
+    height: 20rem;
 }
 
-.container img{
-    width: 6rem;
-    height: 10rem;
+.description{
+    background-color: #fff;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.2rem;
 }
+.description h3{
+    color: #008168;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.btnAdd{
+    color: #3F464C;
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    border: solid 1px #3F464C;
+    cursor: pointer;
+    align-self: end;
+}
+
+.btnAdd:hover{
+    background-color: #2E3439;
+    color: #fff;
+
+}
+
