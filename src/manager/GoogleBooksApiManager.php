@@ -43,8 +43,7 @@ class GoogleBooksApiManager
                             $cover = [];
                         }
 
-                        if (!empty($datas['items'][$h]['volumeInfo']['title']))
-                        {
+                        if (!empty($datas['items'][$h]['volumeInfo']['title'])) {
                             $name = $datas['items'][$h]['volumeInfo']['title'];
                         }
 

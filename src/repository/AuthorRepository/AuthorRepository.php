@@ -9,7 +9,7 @@ use PDO;
 
 class AuthorRepository extends Connection
 {
-    protected PDO  $connection;
+    protected PDO $connection;
     protected array $config;
     protected string $t_author;
 
@@ -24,12 +24,11 @@ class AuthorRepository extends Connection
     public function findById(int $id)
     {
 
-        $req= $this->connection->prepare("SELECT * FROM `$this->t_author` WHERE id = ?");
+        $req = $this->connection->prepare("SELECT * FROM `$this->t_author` WHERE id = ?");
         $req->execute([$id]);
         $res = $req->fetch();
 
-        if (!sizeof($res))
-        {
+        if (!sizeof($res)) {
             return null;
         }
         return $res;
@@ -37,12 +36,11 @@ class AuthorRepository extends Connection
 
     public function findAll(): array
     {
-        $req= $this->connection->prepare("SELECT * FROM `$this->t_author` ");
+        $req = $this->connection->prepare("SELECT * FROM `$this->t_author` ");
         $req->execute();
         $res = $req->fetchAll(PDO::FETCH_ASSOC);
 
-        if (!sizeof($res))
-        {
+        if (!sizeof($res)) {
             return [];
         }
         return $res;
@@ -50,25 +48,23 @@ class AuthorRepository extends Connection
 
     public function findByName(string $name): array
     {
-        $req= $this->connection->prepare("SELECT * FROM `$this->t_author` WHERE name = ?");
+        $req = $this->connection->prepare("SELECT * FROM `$this->t_author` WHERE name = ?");
         $req->execute([$name]);
         $res = $req->fetchAll(PDO::FETCH_ASSOC);
 
-        if (!$res)
-        {
+        if (!$res) {
             return [];
         }
         return $res;
     }
 
-    public function add(Author $author):Author
+    public function add(Author $author): Author
     {
         $req = $this->connection->prepare("INSERT INTO `$this->t_author` (name) VALUES(:name)");
 
         $req->bindValue(':name', $author->getName());
 
         $res = $req->execute();
-
 
 
         if (!$res) {

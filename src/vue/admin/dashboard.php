@@ -6,8 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../../public/css/normalize.css">
-    <link rel="stylesheet" href="../../../public/css/admin/templates/menu2.css">
-    <link rel="stylesheet" href="../../../public/css/admin/dashboard.css">
+    <link rel="stylesheet" href="../../../public/css/admin/templates/menu.css">
+    <link rel="stylesheet" href="../../../public/css/admin/templates/dashboard.css">
 
     <title>Librairie digital - Tableau de bord</title>
 </head>
@@ -15,26 +15,26 @@
 
 <div class="containerGeneral">
     <?php
-    include_once 'templates/menu2.php';
+    include_once 'templates/menu.php';
     ?>
     <div class="container">
-            <div class="date">
-            </div>
-            <div class="lastBook">
-                <h3>Derniers livres ajoutés</h3>
-                <table>
-                    <thead>
-                    <tr>
-                        <th>ISBN</th>
-                        <th>Nom</th>
-                        <th>Date de publication</th>
-                        <th>Catégorie</th>
-                        <th>Auteur(e)</th>
-                        <th>Action</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <?php foreach ($books as $book): ?>
+        <div class="date">
+        </div>
+        <div class="lastBook">
+            <h3>Derniers livres ajoutés</h3>
+            <table>
+                <thead>
+                <tr>
+                    <th>ISBN</th>
+                    <th>Nom</th>
+                    <th>Date de publication</th>
+                    <th>Catégorie</th>
+                    <th>Auteur(e)</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($books as $book): ?>
 
                     <tr>
 
@@ -51,16 +51,16 @@
                             </form>
                         </td>
                     </tr>
-                    <?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
         </div>
+    </div>
 </div>
 
 
 <script src="../../../public/js/admin/dashboard.js"></script>
-<script src="../../../public/js/admin/templates/navbar.js"></script>
+<script src="../../../public/js/admin/templates/menu.js"></script>
 </body>
 </html>
 

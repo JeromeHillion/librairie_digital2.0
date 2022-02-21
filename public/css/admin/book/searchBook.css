@@ -1,41 +1,67 @@
-body{
+body {
     background-color: #EEF0F3;
     font-size: 16px;
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
 }
 
-.search{
+.search {
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
     padding: 0.5rem;
-    border-left: solid 0.5rem #008168;
     border-radius: 0.2rem;
     margin: 1rem;
 }
 #name{
-    width: 28.7rem;
-    padding: 0.25rem;
+    border: none;
+    flex: 2;
+}
+.inputSearch {
+    display: flex;
+    align-items: center;
+    width: 30rem;
     border: solid 1px #ccc;
     border-radius: 0.2rem;
+    justify-content: space-between;
 }
-
-.search input[type ="submit"]{
-    padding: 0.35rem;
-    background-color: #2E3439 ;
+.search h2{
+    color: #00C09E;
+    margin: 1.245rem 0 0 0;
+}
+.search h3{
+    color: #727F89;
+}
+.search button {
+    display: flex;
+    justify-content: center;
+    flex: 0.2;
+    padding: 0.2rem;
+    background-color: #00C09E;
     color: #ccc;
     font-size: 0.98rem;
     border: none;
     border-radius: 0.2rem;
     cursor: pointer;
+
 }
 
-.search input[type ="submit"]:hover{
+
+.search img {
+align-self: center;
+    width: 1.3rem;
+    height: 1.3rem;
+
+}
+
+.search input[type ="submit"]:hover {
     color: #fff;
 }
 
-.result{
+.result {
     background-color: #fff;
     margin: 1rem;
     padding: 1rem;
@@ -44,22 +70,22 @@ body{
     border-radius: 0.2rem;
 }
 
-table
-{
+table {
     border: solid 0.1rem #ccc;
     border-collapse: collapse;
     align-items: center;
 }
-tr{
+
+tr {
     border: solid 0.1rem #ccc;
 }
-tr th
-{
 
-    background-color: #008168;
+tr th {
+
+    background-color: #00C09E;
     color: #fff;
     padding: 0.3rem;
-    font-size:1rem;
+    font-size: 1rem;
 }
 
 tr td {
@@ -68,20 +94,19 @@ tr td {
     text-align: center;
 }
 
-tr:nth-child(odd)
-{
+tr:nth-child(odd) {
     background-color: #fff;
 }
 
-tr:nth-child(even)
-{
+tr:nth-child(even) {
     background-color: #E0F2F1;
 }
 
-.result form{
+.result form {
     display: inline-block;
 }
-.btnDetail{
+
+.btnDetail {
     color: #00C09E;
     background-color: #fff;
     padding: 0.5rem;
@@ -89,15 +114,15 @@ tr:nth-child(even)
     border: solid 1px #00C09E;
     cursor: pointer;
 
-
 }
 
-.btnDetail:hover{
-    background-color: #008168;
+.btnDetail:hover {
+    background-color: #00C09E;
     color: #fff;
 
 }
-.btnAdd{
+
+.btnAdd {
     color: #3F464C;
     background-color: #fff;
     padding: 0.5rem;
@@ -105,14 +130,48 @@ tr:nth-child(even)
     border: solid 1px #3F464C;
     cursor: pointer;
 
-
 }
 
-.btnAdd:hover{
+.btnAdd:hover {
     background-color: #2E3439;
     color: #fff;
 
 }
-#error{
+
+#error {
     display: none;
+}
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3) {
+
+    body{
+        font-size: 16px;
+    }
+    #name {
+        width: 20rem;
+        padding: 0.15rem;
+    }
+
+    .search h2 {
+        font-size: 0.9rem;
+    }
+
+    .search h3, .result h3 {
+        font-size: 0.7rem;
+    }
+    .inputSearch {
+        width: 20rem;
+    }
+
+    tr th, tr td {
+        font-size: 12px;
+    }
+
+    .btnDetail, .btnAdd{
+        padding: 0.2rem;
+    }
 }

@@ -1,48 +1,141 @@
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
 
-li{
-    list-style: none;
+.containerGeneral {
+    display: flex;
+}
+
+.menuLateral {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    box-shadow: 5px 5px 5px #ccc;
 
 }
-.menuDeroulant
-{
-    display: none;
+.subMenuLateral{
+    flex-direction: column;
+    flex: 1;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+}
+
+.dashboard {
+    display: flex;
     align-items: center;
+    background-color: #00C09E;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.57rem;
+    margin: 0;
+}
+
+.dashboard img {
+    width: 1.3rem;
+    height: 1.3rem;
+    padding: 0 0.5rem 0 1rem;
+}
+
+.dashboard a {
+    color: #fff !important;
+    padding: 0.5rem;
+
+}
+.menuLateral p, .menuLateral a {
+    padding-left: 1rem;
+}
+.menuSection{
+    display: flex;
+    flex-direction: column;
 }
 .menuDeroulant img{
-    width: 1rem;
-    height: 1rem;
+    display: none;
+    width: 1.3rem;
+    height: 1.3rem;
+    padding: 0.3rem;
+
 }
-.menuDeroulant h3{
-    margin: 0 0;
-}
-.verticalMenu h3
-{
-    border-bottom: solid 1px #C3CBD2;
+.menuLateral p {
+    padding-left: 1rem;
+    margin: 0.5rem 0 0.5rem 0;
+    color: #3F464C;
 }
 
-a{
+.menuLateral a {
     text-decoration: none;
-    color: #C3CBD2;
+    display: block;
 }
-.book h3,.customer h3,.loan h3{
-    color: #828C95;
-    margin: 1rem 1rem 0.5rem 0;
+
+.menuLateral a:hover {
+    color: #008168;
 }
-.verticalMenu h2, .menuDeroulant h3 {
-    color: #828C95;
-    margin: 1rem 1rem 0.5rem 0.5rem;
-    background-color: #F3F4F7;
+.menuLateral p:nth-child(1),
+.menuLateral p:nth-child(2),
+.menuLateral p:nth-child(5),
+.menuLateral p:nth-child(6),
+.menuLateral p:nth-child(8) {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #3F464C;
+}
+
+.menuLateral a:nth-child(5),
+.menuLateral a:nth-child(8) {
+    margin-bottom: 1rem;
+    color: #727F89;
+}
+.menuDeroulant{
+    background-color: #fff;
+
+}
+
+.menuHorizontal {
+    display: flex;
+    flex-direction: column;
+    flex: 6;
+
+}
+
+.subMenu {
+    display: flex;
+    justify-content: space-between;
+    background-color: #3F464C;
     padding: 0.5rem;
+}
+
+
+.subMenu p {
+    margin: 0;
+    color: #ffffff;
+    align-self: center;
+    font-weight: bold;
+}
+
+.subMenu a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #485259;
     border-radius: 0.2rem;
-
-}
-ul{
+    font-size: 1rem;
     padding: 0.5rem;
 }
 
-/*Media queries*/
+.subMenu img {
+    width: 1.3rem;
+    height: 1.3rem;
+    padding: 0 0.5rem 0 0.2rem;
+}
 
-/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+.subMenu a:hover {
+    background-color: #2E3439;
+}
+
 
 /* Portrait and Landscape */
 @media only screen
@@ -50,14 +143,42 @@ and (min-device-width: 414px)
 and (max-device-width: 736px)
 and (-webkit-min-device-pixel-ratio: 3) {
 
-    body
-    {
-        font-size: 12px ;
+    .containerGeneral{
+        flex-direction: column;
     }
-    .menuDeroulant
-    {
-        display: flex;
-        justify-content: space-between;
+    .subMenu img {
+        width: 1.1rem;
+        height: 1.1rem;
+        padding: 0 ;
+    }
+    .subMenu a {
+        background-color: #00C09E;
     }
 
+    .menuLateral p:nth-child(1),
+    .menuLateral p:nth-child(2),
+    .menuLateral p:nth-child(5),
+    .menuLateral p:nth-child(8),
+    .menuLateral p:nth-child(9) {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #3F464C;
+    }
+
+    .menuSection{
+        display: none;
+
+    }
+    .menuDeroulant {
+        display: flex;
+        justify-content: end;
+        padding: 0.5rem;
+    }
+    .menuDeroulant img{
+        display: block;
+    }
+    .subMenuLateral{
+        display: none;
+        min-height: 0;
+    }
 }

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\entity;
+
 use DateTime;
 
 class Book
@@ -13,9 +14,6 @@ class Book
     public string $summary;
     protected int $category_id;
     protected int $author_id;
-
-    
-    
 
 
     public function getId(): int
@@ -61,15 +59,14 @@ class Book
     }
 
 
-
     public function getName(): string
     {
-       return $this->name;
+        return $this->name;
     }
 
     public function setName($name)
     {
-        $this->name =$name;
+        $this->name = $name;
     }
 
     /**
@@ -89,8 +86,7 @@ class Book
     }
 
 
-
-    public function getSummary(): string 
+    public function getSummary(): string
     {
         return $this->summary;
     }

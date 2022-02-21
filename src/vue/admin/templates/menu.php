@@ -1,24 +1,29 @@
-<?php
-include_once 'navbar.php';
-?>
-
-<div class="menuDeroulant">
-    <h3>Accueil</h3>
+<div class="menuLateral">
+    <div class="menuDeroulant">
+    <img src="../../../public/css/admin/icones/more.png" alt="icone menu hamburger">
+    </div>
+    <div class="subMenuLateral">
+    <div class="dashboard">
+        <img src="../../../public/css/admin/icones/interface-de-tableau-de-bord.png" alt="icone tableau de bord">
+        <a href="DashboardController.php">Tableau de bord</a>
+    </div>
+    <div class="menuSection">
+    <p>Accueil</p>
+    <p>Livres</p>
+    <a href="SearchBookController.php">Ajouter un livre</a>
+    <a href="CatalogController.php">Gestion des livres</a>
+    <p>Utilisateurs</p>
+    <a href="">Gestion des utilisateurs</a>
+    <a href="">Liste des utilisateur</a>
+    <p>Emprunts</p>
+    <a href="">Liste des emprunts</a>
+    </div>
+    </div>
 </div>
-<div class="verticalMenu">
-    <a href="#"><h3>Accueil</h3></a>
-    <ul class="book">
-       <h3><li>Livres</li></h3>
-        <a href="#"><li>Gestion  des livres</li></a>
-        <a href="#"><li>Catalogues</li></a>
-    </ul>
-    <ul class="customer">
-       <h3><li>Utilisateur</li></h3>
-        <a href="#"><li>Gestion  des utilisateurs</li></a>
-        <a href="#"><li>Liste des utilisateurs</li></a>
-    </ul>
-    <ul class="loan">
-       <h3><li>Emprunts</li></h3>
-        <a href="#"><li>Liste des emprunt</li></a>
-    </ul>
-</div>
+<div class="menuHorizontal">
+    <div class="subMenu">
+        <a href="SearchBookController.php"><img src="../../../public/css/admin/icones/ajouter-un-bouton.png"
+                                                alt="icone plus">Ajouter un livre </a>
+        <p>Librairie digital</p>
+        <a href="#"><img src="../../../public/css/admin/icones/accueil.png" alt="icone accueil">Page d'accueil</a>
+    </div>

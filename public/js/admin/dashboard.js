@@ -52,6 +52,20 @@ document.addEventListener("DOMContentLoaded", () => {
                     break;
             }
         });
+
+
+
+
+        let menuLateral  = document.querySelector(".menuLateral");
+        let container  = document.querySelector(".container");
+        let menuHorizontal = document.querySelector(".menuHorizontal");
+        menuHorizontal.insertBefore(menuLateral, container.nextSibling);
+        container.append(menuLateral);
+        let date = document.querySelector(".date");
+        container.insertBefore(menuLateral, date);
+
+
+
     }
 });
 

@@ -6,8 +6,8 @@ class Category
 {
     protected int $id;
     protected string $name;
-    
-        
+
+
     /**
      * __construct
      *
@@ -15,7 +15,7 @@ class Category
      */
     public function __construct()
     {
-      
+
     }
 
     public function getId(): int
@@ -43,8 +43,6 @@ class Category
     {
         $this->name = $name;
     }
-
-
 
 
 }

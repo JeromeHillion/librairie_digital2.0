@@ -25,12 +25,11 @@ class BookRepository extends Connection
 
     public function findByIsbn(int $isbn)
     {
-        $req= $this->connection->prepare("SELECT * FROM `$this->t_book` WHERE isbn = ?");
+        $req = $this->connection->prepare("SELECT * FROM `$this->t_book` WHERE isbn = ?");
         $req->execute([$isbn]);
         $res = $req->fetch();
 
-        if (empty($res))
-        {
+        if (empty($res)) {
             return [];
         }
         return $res;
@@ -44,8 +43,7 @@ class BookRepository extends Connection
         $req->execute();
         $res = $req->fetchAll(PDO::FETCH_ASSOC);
 
-        if (!sizeof($res))
-        {
+        if (!sizeof($res)) {
             return [];
         }
         return $res;
@@ -59,8 +57,7 @@ class BookRepository extends Connection
         $req->execute();
         $res = $req->fetchAll(PDO::FETCH_ASSOC);
 
-        if (!sizeof($res))
-        {
+        if (!sizeof($res)) {
             return [];
         }
         return $res;
@@ -71,18 +68,18 @@ class BookRepository extends Connection
         // TODO: Implement findByName() method.
     }
 
-    public function add($book) :Book
+    public function add($book): Book
 
     {
 
-        $req =$this->connection->prepare("INSERT INTO `$this->t_book` (isbn,cover,name,publication,summary,category_id,author_id) VALUES(:isbn,:cover,:name,:publication,:summary,:category_id,:author_id)");
-        $req->bindValue("isbn",$book->getIsbn());
-        $req->bindValue("cover",$book->getCover());
-        $req->bindValue("name",ucfirst($book->getName()));
-        $req->bindValue("publication",$book->getPublication());
-        $req->bindValue("summary",ucfirst($book->getSummary()));
-        $req->bindValue("category_id",$book->getCategoryId());
-        $req->bindValue("author_id",$book->getAuthorId());
+        $req = $this->connection->prepare("INSERT INTO `$this->t_book` (isbn,cover,name,publication,summary,category_id,author_id) VALUES(:isbn,:cover,:name,:publication,:summary,:category_id,:author_id)");
+        $req->bindValue("isbn", $book->getIsbn());
+        $req->bindValue("cover", $book->getCover());
+        $req->bindValue("name", ucfirst($book->getName()));
+        $req->bindValue("publication", $book->getPublication());
+        $req->bindValue("summary", ucfirst($book->getSummary()));
+        $req->bindValue("category_id", $book->getCategoryId());
+        $req->bindValue("author_id", $book->getAuthorId());
         $res = $req->execute();
 
         if (!$res) {

@@ -2,45 +2,43 @@ body{
     background-color: #EEF0F3;
     font-size: 16px;
 }
+
+.menuSection p:nth-child(1){
+
+    background-color: #EEEEEE;
+    color: #00C09E;
+    padding: 0.5rem;
+}
 .container{
     display: flex;
     flex-direction: column;
 
 
 }
-/*.container .row:nth-child(1){
-    padding: 1rem;
-    flex: 0.651;
-}
-.container .row:nth-child(2){
-    padding: 2rem;
-    flex: 2;
-    background-color: #EEF0F3;
-    display: flex;
-    flex-direction: column ;
-    justify-content: space-between;
-}*/
 
 .date
 {
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
     padding: 0.5rem;
-    border-left: solid 0.5rem #008168;
+    /*border-left: solid 0.5rem #ccc;*/
     border-radius: 0.2rem;
     margin: 1rem;
+    box-shadow: 5px 5px 5px #ccc;
 
 }
 
 .date h2
 {
 font-size: 1.25rem;
-    color: #727F89;
+    color: #00C09E;
 }
 
 .date h3
 {
 font-size: 1.125rem;
-    color: #A7B8C5;
+    color: #727F89;
 }
 
 .calendar, .timer
@@ -65,6 +63,7 @@ font-size: 1.125rem;
     display: flex;
     flex-direction: column;
     border-radius: 0.2rem;
+    box-shadow: 5px 5px 5px #ccc;
 }
 
 table
@@ -79,7 +78,7 @@ tr{
 tr th
 {
 
-    background-color: #008168;
+    background-color: #00C09E;
     color: #fff;
     padding: 0.3rem;
     font-size:1rem;
@@ -132,14 +131,17 @@ and (min-device-width: 414px)
 and (max-device-width: 736px)
 and (-webkit-min-device-pixel-ratio: 3) {
 
+    body{
+        font-size: 12px;
+    }
+
     .container
     {
         display: block;
     }
 
-    .container .row:nth-child(1) {
-        padding:0 0.5rem 0 0.5rem;
-        flex: 0.651;
+    .menuLateral{
+        min-height: 0;
     }
 
     .date{
@@ -156,6 +158,19 @@ and (-webkit-min-device-pixel-ratio: 3) {
     .calendar img, .timer img{
         width: 1rem;
         height: 1rem;
+    }
+    .menuLateral p:nth-child(1){
+        background-color: #EEE;
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
+        color: #00C09E;
+    }
+
+    tr th, tr td {
+        font-size: 12px;
+    }
+    .btnDetail {
+        padding: 0.2rem;
+
     }
 
 }

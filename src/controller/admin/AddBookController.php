@@ -12,7 +12,7 @@ use App\repository\CategoryRepository\CategoryRepository;
 
 ini_set('display_errors', true);
 
-require '../../../../vendor/autoload.php';
+require '../../../vendor/autoload.php';
 
 $categoryRepository = new CategoryRepository();
 $authorRepository = new AuthorRepository();
@@ -65,8 +65,7 @@ $bookExist = $bookRepository->findByIsbn($book->getIsbn());
 if (!$bookExist) {
     echo "Le livre n'existe pas !";
     $bookRepository->add($book);
-    header("Location: ../SearchBookController.php");
+    header("Location: SearchBookController.php");
 }
-header("Location: ../SearchBookController.php");
+header("Location: SearchBookController.php");
 
-require '../../../vue/admin/book/crud/addBook.php';

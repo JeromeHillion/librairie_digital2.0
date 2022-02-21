@@ -6,16 +6,15 @@ class Author
 {
     protected int $id;
     protected string $name;
-    
+
     /**
      * __construct
      *
-     
      * @return void
      */
     public function __construct()
     {
-       
+
     }
 
     public function getId(): int
@@ -43,8 +42,6 @@ class Author
     {
         $this->name = $name;
     }
-
-
 
 
 }

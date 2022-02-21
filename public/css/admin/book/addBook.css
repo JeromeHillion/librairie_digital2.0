@@ -1,13 +1,15 @@
-body{
+body {
     background-color: #EEF0F3;
     font-size: 16px;
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
 
 }
-.form, .exist{
+
+.form, .exist {
     background-color: #fff;
     margin: 1rem;
     padding: 1rem;
@@ -16,11 +18,12 @@ body{
     border-radius: 0.2rem;
 }
 
-.exist{
+.exist {
     display: none;
     border-left: solid 0.5rem #008168;
 }
-.return{
+
+.return {
     color: #00C09E;
     background-color: #fff;
     padding: 0.5rem;
@@ -29,34 +32,53 @@ body{
     text-decoration: none;
     align-self: end;
 }
-.return:hover{
+
+.return:hover {
     background-color: #008168;
     color: #fff;
 }
-form{
+
+form {
     display: flex;
-    flex:1;
+    flex: 1;
     flex-direction: column;
     align-items: center;
 
 }
-.form h3{
+
+.form h3 {
     text-align: center;
     color: #00C09E;
 }
-form label{
+
+form label {
     margin: 0.5rem 0 0.5rem 0;
     font-weight: bold;
 }
 
-form label input, form label textarea{
+form label input, form label textarea {
     display: block;
     margin: 0.5rem 0 0 0;
 }
 
-form label input, form label textarea{
+form label input, form label textarea {
     padding: 0.5rem;
     border: solid 1px #ccc;
     border-radius: 0.2rem;
     width: 30rem;
+}
+
+.btnAdd {
+    color: #3F464C;
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    border: solid 1px #3F464C;
+    cursor: pointer;
+}
+
+.btnAdd:hover {
+    background-color: #2E3439;
+    color: #fff;
+
 }

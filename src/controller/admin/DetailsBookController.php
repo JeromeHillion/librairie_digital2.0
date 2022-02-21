@@ -9,10 +9,9 @@ require '../../../vendor/autoload.php';
 
 $googleBooksApiManager = new  GoogleBooksApiManager();
 
-if (empty($_POST['isbn'])){
+if (empty($_POST['isbn'])) {
     throw new RestrictedException();
-}
-else{
+} else {
 
     $book = $googleBooksApiManager->getBookByIsbn($_POST['isbn']);
 }

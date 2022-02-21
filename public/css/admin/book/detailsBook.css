@@ -1,43 +1,47 @@
-body{
+body {
     background-color: #EEF0F3;
     font-size: 16px;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
 }
-.container span{
+
+.container span {
     font-weight: bold;
 }
-.info{
+
+.info {
     display: flex;
     justify-content: center;
     background-color: #fff;
-    border-left: solid 0.5rem #008168;
     border-radius: 0.2rem;
     margin: 1rem;
+    padding: 1rem;
 
 }
-.details, .picture{
-    padding: 2rem;
-}
-.details{
 
+.details {
+display: flex;
+    flex-direction: column;
     flex: 3;
 }
-details h3{}
 
-.picture{
-
-    flex:2;
-}
-.picture img{
-    width: 15rem;
-    height: 20rem;
+details h3 {
 }
 
-.description{
+.picture {
+
+    flex: 0.5;
+}
+
+.picture img {
+    width: 10rem;
+    height: 15rem;
+}
+
+.description {
     background-color: #fff;
     margin: 1rem;
     padding: 1rem;
@@ -45,16 +49,17 @@ details h3{}
     flex-direction: column;
     border-radius: 0.2rem;
 }
-.description h3{
+
+.description h3 {
     color: #008168;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
 }
 
-.btnAdd{
+.btnAdd {
     color: #3F464C;
     background-color: #fff;
     padding: 0.5rem;
@@ -64,9 +69,22 @@ form{
     align-self: end;
 }
 
-.btnAdd:hover{
+.btnAdd:hover {
     background-color: #2E3439;
     color: #fff;
 
 }
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3) {
 
+    body{
+        font-size: 12px;
+    }
+
+    .info{
+        flex-direction: column;
+    }
+}

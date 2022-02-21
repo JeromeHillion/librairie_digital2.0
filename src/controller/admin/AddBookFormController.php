@@ -11,13 +11,11 @@ $googleBooksApiManager = new  GoogleBooksApiManager();
 $bookRepository = new BookRepository();
 /*var_dump($googleBooksApiManager->getBookByIsbn($_POST['isbn']));
 die;*/
-$exist =$bookRepository->findByIsbn($_POST['isbn']);
-if (!$exist){
+$exist = $bookRepository->findByIsbn($_POST['isbn']);
+if (!$exist) {
     $book = $googleBooksApiManager->getBookByIsbn($_POST['isbn']);
 
-}
-
-else {
+} else {
 
     $book = "";
 }

@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../public/css/normalize.css">
-    <link rel="stylesheet" href="../../../public/css/admin/templates/menu2.css">
+    <link rel="stylesheet" href="../../../public/css/admin/templates/menu.css">
     <link rel="stylesheet" href="../../../public/css/admin/book/searchBook.css">
 
 
-    <title>Librairie digital - Rechercher un  livre</title>
+    <title>Librairie digital - Rechercher un livre</title>
 </head>
 
 <body>
 <div class="containerGeneral">
     <?php
-    include_once '../../vue/admin/templates/menu2.php';
+    include_once '../../vue/admin/templates/menu.php';
     ?>
     <div class="container">
         <div class="search">
@@ -24,9 +24,11 @@
 
             <form id="search" action="SearchBookController.php" method="POST">
                 <h3>Taper le nom du livre que vous souhaitez rechercher</h3>
+                <div class="inputSearch">
                 <label for="name"></label>
                 <input type="text" name="name" id="name">
-                <input type="submit">
+                <button type="submit"><img src="../../../public/css/admin/icones/magnifying-glass.png" alt=""></button>
+                </div>
                 <span id="error"></span>
             </form>
         </div>
@@ -49,26 +51,26 @@
                 <?php foreach ($books as $book): ?>
                     <tr>
 
-                        <td><?= $book['isbn']; ?></td>
-                        <td><?= $book['name']; ?>
-                        <td><?= $book['publication']; ?></td>
+                        <td class="isbn"><?= $book['isbn']; ?></td>
+                        <td class="name"><?= $book['name']; ?>
+                        <td class="publication"><?= $book['publication']; ?></td>
 
                         <?php if ($book['categorie']): ?>
                             <?php foreach ($book['categorie'] as $categorie): ?>
-                                <td><?= $categorie; ?></td>
+                                <td class="category"><?= $categorie; ?></td>
                             <?php endforeach; ?>
                         <?php else: ?>
-                            <td>non comuniqué</td>
+                            <td class="category">non comuniqué</td>
                         <?php endif; ?>
 
                         <?php if ($book['authors']): ?>
-                            <td>
-                                <?php foreach ($book['authors'] as $author): ?>
-                                    <?= $author; ?>
+                            <td class="author">
+                            <?php foreach ($book['authors'] as $author): ?>
+                                 <?= $author; ?>
                                 <?php endforeach; ?>
                             </td>
                         <?php else: ?>
-                            <td>non comuniqué</td>
+                            <td class="author">non comuniqué</td>
                         <?php endif; ?>
 
                         <td>
@@ -91,7 +93,8 @@
 
     </div>
 
-    <script src="../../../public/js/admin/book/book.js"></script>
+    <script src="../../../public/js/admin/book/searchBook.js"></script>
+    <script src="../../../public/js/admin/templates/menu.js"></script>
 </body>
 
 </html>
