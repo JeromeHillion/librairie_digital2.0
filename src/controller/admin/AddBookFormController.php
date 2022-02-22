@@ -1,5 +1,6 @@
 <?php
 
+use App\Exception\NullException;
 use App\manager\GoogleBooksApiManager;
 use App\repository\BookRepository\BookRepository;
 
@@ -9,16 +10,14 @@ require '../../../vendor/autoload.php';
 
 $googleBooksApiManager = new  GoogleBooksApiManager();
 $bookRepository = new BookRepository();
-/*var_dump($googleBooksApiManager->getBookByIsbn($_POST['isbn']));
-die;*/
+if (empty($_POST['isbn'])) {
+    throw new NullException();
+
+}
 $exist = $bookRepository->findByIsbn($_POST['isbn']);
 if (!$exist) {
     $book = $googleBooksApiManager->getBookByIsbn($_POST['isbn']);
 
-} else {
-
-    $book = "";
 }
-
 
 require '../../vue/admin/book/crud/addBookForm.php';

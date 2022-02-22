@@ -67,16 +67,7 @@
         <?php endif ?>
     </div>
 </div>
-<script>
-    let container = document.querySelector(".container");
-    console.log(container);
-    if (container.childElementCount < 2) {
-        let exist = document.querySelector(".exist");
-        exist.style.display = "flex";
-
-        /*let aReturn = document.querySelector(".return");
-        aReturn.href = "SearchBookController.php"*/
-    }
-</script>
+<script src="../../../public/js/admin/templates/menu.js"></script>
+<script src="../../../public/js/admin/book/addBookForm.js"></script>
 </body>
 </html>

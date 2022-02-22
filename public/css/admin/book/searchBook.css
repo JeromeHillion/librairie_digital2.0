@@ -141,7 +141,9 @@ tr:nth-child(even) {
 #error {
     display: none;
 }
+/*Media queries*/
 
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
 /* Portrait and Landscape */
 @media only screen
 and (min-device-width: 414px)
@@ -174,4 +176,15 @@ and (-webkit-min-device-pixel-ratio: 3) {
     .btnDetail, .btnAdd{
         padding: 0.2rem;
     }
+}
+
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
 }

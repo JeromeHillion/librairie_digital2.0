@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         a.forEach(function(item){
             console.log(item);
-            /*item.textContent ="";*/
             item.childNodes[1].remove();
         });
 
