@@ -9,6 +9,11 @@ body {
 
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
 .form, .exist {
     background-color: #fff;
     margin: 1rem;
@@ -80,5 +85,25 @@ form label input, form label textarea {
 .btnAdd:hover {
     background-color: #2E3439;
     color: #fff;
+
+}
+
+/*Media queries*/
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+    body {
+        font-size: 12px;
+    }
+
+    form label input, form label textarea {
+        width: 20rem;
+    }
 
 }

@@ -41,8 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
         let tbodyTd = document.querySelectorAll('table tbody tr td');
         tbodyTd.forEach(function (item) {
 
-            /*console.log(item);*/
-
             switch (item.className) {
                 case "isbn":
                     item.remove();
@@ -54,16 +52,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
 
-
-
-        let menuLateral  = document.querySelector(".menuLateral");
-        let container  = document.querySelector(".container");
+        let menuLateral = document.querySelector(".menuLateral");
+        let container = document.querySelector(".container");
         let menuHorizontal = document.querySelector(".menuHorizontal");
         menuHorizontal.insertBefore(menuLateral, container.nextSibling);
         container.append(menuLateral);
         let date = document.querySelector(".date");
         container.insertBefore(menuLateral, date);
-
 
 
     }

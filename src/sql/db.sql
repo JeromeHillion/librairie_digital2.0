@@ -20,6 +20,7 @@ CREATE TABLE `author`
 CREATE TABLE `book`
 (
     `id`          int(11) PRIMARY KEY AUTO_INCREMENT      NOT NULL,
+    `isbn`        bigint(20)                              NOT NULL,
     `cover`       varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
     `name`        varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
     `publication` date                                    NOT NULL,

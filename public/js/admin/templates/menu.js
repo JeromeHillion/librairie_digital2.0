@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (screen.width === 414 && screen.height === 736) {
         console.log(screen.width + "*" + screen.height);
-        let dashboard= document.querySelector(".dashboard");
+        let dashboard = document.querySelector(".dashboard");
         dashboard.remove();
 
         let menuLateralImg = document.querySelector(".menuLateral img");
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let a = document.querySelectorAll(".subMenu a");
 
 
-        a.forEach(function(item){
+        a.forEach(function (item) {
             console.log(item);
             item.childNodes[1].remove();
         });

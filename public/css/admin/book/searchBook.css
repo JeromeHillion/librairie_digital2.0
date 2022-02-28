@@ -16,10 +16,12 @@ body {
     border-radius: 0.2rem;
     margin: 1rem;
 }
-#name{
+
+#name {
     border: none;
     flex: 2;
 }
+
 .inputSearch {
     display: flex;
     align-items: center;
@@ -28,13 +30,16 @@ body {
     border-radius: 0.2rem;
     justify-content: space-between;
 }
-.search h2{
+
+.search h2 {
     color: #00C09E;
     margin: 1.245rem 0 0 0;
 }
-.search h3{
+
+.search h3 {
     color: #727F89;
 }
+
 .search button {
     display: flex;
     justify-content: center;
@@ -51,7 +56,7 @@ body {
 
 
 .search img {
-align-self: center;
+    align-self: center;
     width: 1.3rem;
     height: 1.3rem;
 
@@ -141,6 +146,7 @@ tr:nth-child(even) {
 #error {
     display: none;
 }
+
 /*Media queries*/
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
@@ -150,9 +156,10 @@ and (min-device-width: 414px)
 and (max-device-width: 736px)
 and (-webkit-min-device-pixel-ratio: 3) {
 
-    body{
+    body {
         font-size: 16px;
     }
+
     #name {
         width: 20rem;
         padding: 0.15rem;
@@ -165,6 +172,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
     .search h3, .result h3 {
         font-size: 0.7rem;
     }
+
     .inputSearch {
         width: 20rem;
     }
@@ -173,18 +181,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
         font-size: 12px;
     }
 
-    .btnDetail, .btnAdd{
+    .btnDetail, .btnAdd {
         padding: 0.2rem;
     }
-}
-
-
-/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
-
-/* Portrait and Landscape */
-@media only screen
-and (min-device-width: 768px)
-and (max-device-width: 1024px)
-and (-webkit-min-device-pixel-ratio: 2) {
-
 }

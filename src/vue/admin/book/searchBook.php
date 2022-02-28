@@ -25,9 +25,10 @@
             <form id="search" action="SearchBookController.php" method="POST">
                 <h3>Taper le nom du livre que vous souhaitez rechercher</h3>
                 <div class="inputSearch">
-                <label for="name"></label>
-                <input type="text" name="name" id="name">
-                <button type="submit"><img src="../../../public/css/admin/icones/magnifying-glass.png" alt=""></button>
+                    <label for="name"></label>
+                    <input type="text" name="name" id="name">
+                    <button type="submit"><img src="../../../public/css/admin/icones/magnifying-glass.png" alt="">
+                    </button>
                 </div>
                 <span id="error"></span>
             </form>
@@ -65,8 +66,8 @@
 
                         <?php if ($book['authors']): ?>
                             <td class="author">
-                            <?php foreach ($book['authors'] as $author): ?>
-                                 <?= $author; ?>
+                                <?php foreach ($book['authors'] as $author): ?>
+                                    <?= $author; ?>
                                 <?php endforeach; ?>
                             </td>
                         <?php else: ?>
